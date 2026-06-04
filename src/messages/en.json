@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Home",
+    "fleet": "Fleet",
+    "about": "About",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "badge": "Premium Luxury Car Rental",
+    "title": "Experience Luxury",
+    "titleHighlight": "On Every Journey",
+    "subtitle": "Discover our exclusive fleet of premium vehicles. From elegant sedans to powerful SUVs — your perfect ride awaits.",
+    "pickupLocation": "Pickup Location",
+    "pickupPlaceholder": "Enter pickup location",
+    "dropoffLocation": "Drop-off Location",
+    "dropoffPlaceholder": "Enter destination",
+    "date": "Date",
+    "searchFleet": "Explore Fleet",
+    "scrollHint": "Scroll to explore"
+  },
+  "footer": {
+    "tagline": "Premium luxury car rental & trip booking. Experience the extraordinary.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "whatsapp": "WhatsApp"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "language": {
+    "en": "English",
+    "ar": "العربية"
+  },
+  "fleet": {
+    "title": "Our Fleet",
+    "subtitle": "Handpicked luxury vehicles for the discerning traveler",
+    "search": "Search vehicles...",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "withDriver": "With Driver",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "perDay": "/ day",
+    "viewDetails": "View Details",
+    "noResults": "No vehicles match your filters",
+    "categories": {
+      "SEDAN": "Sedan",
+      "SUV": "SUV",
+      "SPORTS": "Sports",
+      "LUXURY": "Luxury",
+      "VAN": "Van"
+    },
+    "driverIncluded": "Driver Included",
+    "selfDrive": "Self Drive"
+  },
+  "car": {
+    "specs": "Specifications",
+    "year": "Year",
+    "category": "Category",
+    "price": "Price per Day",
+    "driver": "Driver",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "description": "Description",
+    "reserve": "Reserve via WhatsApp",
+    "bookNow": "Book This Car",
+    "gallery": "Gallery"
+  },
+  "booking": {
+    "title": "Book Your Ride",
+    "subtitle": "Complete the form and confirm via WhatsApp",
+    "step1": "Select Car",
+    "step2": "Your Details",
+    "step3": "Trip Details",
+    "step4": "Confirm",
+    "selectCar": "Choose your vehicle",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+20 xxx xxx xxxx",
+    "pickup": "Pickup Location",
+    "pickupPlaceholder": "Enter pickup address",
+    "dropoff": "Drop-off Location",
+    "dropoffPlaceholder": "Enter destination",
+    "date": "Date",
+    "time": "Time",
+    "passengers": "Number of Passengers",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Send via WhatsApp",
+    "review": "Review Your Booking",
+    "selectedCar": "Selected Vehicle",
+    "required": "This field is required"
+  },
+  "admin": {
+    "title": "SGT Admin",
+    "login": "Sign In",
+    "password": "Password",
+    "dashboard": "Dashboard",
+    "cars": "Manage Cars",
+    "bookings": "Bookings",
+    "logout": "Logout",
+    "stats": {
+      "totalCars": "Total Cars",
+      "available": "Available",
+      "bookings": "Total Bookings",
+      "pending": "Pending"
+    },
+    "addCar": "Add Car",
+    "editCar": "Edit Car",
+    "deleteCar": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "make": "Make",
+    "model": "Model",
+    "year": "Year",
+    "category": "Category",
+    "price": "Price/Day",
+    "imageUrl": "Image URL",
+    "description": "Description",
+    "withDriver": "With Driver",
+    "isAvailable": "Available",
+    "actions": "Actions",
+    "noBookings": "No bookings yet",
+    "loginError": "Invalid password"
+  },
+  "home": {
+    "featured": "Featured Collection",
+    "viewAll": "View All Fleet"
+  }
+}

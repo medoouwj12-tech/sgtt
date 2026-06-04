@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "fleet": "الأسطول",
+    "about": "من نحن",
+    "contact": "تواصل",
+    "bookNow": "احجز الآن"
+  },
+  "hero": {
+    "badge": "تأجير سيارات فاخرة",
+    "title": "اختبر الفخامة",
+    "titleHighlight": "في كل رحلة",
+    "subtitle": "اكتشف أسطولنا الحصري من السيارات الفاخرة. من السيدان الأنيقة إلى سيارات الدفع الرباعي — رحلتك المثالية في انتظارك.",
+    "pickupLocation": "موقع الاستلام",
+    "pickupPlaceholder": "أدخل موقع الاستلام",
+    "dropoffLocation": "موقع التسليم",
+    "dropoffPlaceholder": "أدخل الوجهة",
+    "date": "التاريخ",
+    "searchFleet": "استكشف الأسطول",
+    "scrollHint": "مرر للاستكشاف"
+  },
+  "footer": {
+    "tagline": "تأجير سيارات فاخرة وحجز رحلات. اختبر التميز.",
+    "quickLinks": "روابط سريعة",
+    "contact": "تواصل",
+    "rights": "جميع الحقوق محفوظة.",
+    "whatsapp": "واتساب"
+  },
+  "theme": {
+    "light": "الوضع الفاتح",
+    "dark": "الوضع الداكن"
+  },
+  "language": {
+    "en": "English",
+    "ar": "العربية"
+  },
+  "fleet": {
+    "title": "أسطولنا",
+    "subtitle": "سيارات فاخرة مختارة بعناية للمسافر المميز",
+    "search": "ابحث عن سيارة...",
+    "category": "الفئة",
+    "allCategories": "جميع الفئات",
+    "withDriver": "مع سائق",
+    "all": "الكل",
+    "yes": "نعم",
+    "no": "لا",
+    "perDay": "/ يوم",
+    "viewDetails": "عرض التفاصيل",
+    "noResults": "لا توجد سيارات تطابق البحث",
+    "categories": {
+      "SEDAN": "سيدان",
+      "SUV": "دفع رباعي",
+      "SPORTS": "رياضية",
+      "LUXURY": "فاخرة",
+      "VAN": "فان"
+    },
+    "driverIncluded": "يشمل سائق",
+    "selfDrive": "قيادة ذاتية"
+  },
+  "car": {
+    "specs": "المواصفات",
+    "year": "السنة",
+    "category": "الفئة",
+    "price": "السعر لليوم",
+    "driver": "السائق",
+    "available": "متاحة",
+    "unavailable": "غير متاحة",
+    "description": "الوصف",
+    "reserve": "احجز عبر واتساب",
+    "bookNow": "احجز هذه السيارة",
+    "gallery": "معرض الصور"
+  },
+  "booking": {
+    "title": "احجز رحلتك",
+    "subtitle": "أكمل النموذج وأكد الحجز عبر واتساب",
+    "step1": "اختر السيارة",
+    "step2": "بياناتك",
+    "step3": "تفاصيل الرحلة",
+    "step4": "تأكيد",
+    "selectCar": "اختر سيارتك",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "+20 xxx xxx xxxx",
+    "pickup": "موقع الاستلام",
+    "pickupPlaceholder": "أدخل عنوان الاستلام",
+    "dropoff": "موقع التسليم",
+    "dropoffPlaceholder": "أدخل الوجهة",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "passengers": "عدد الركاب",
+    "next": "التالي",
+    "back": "رجوع",
+    "submit": "إرسال عبر واتساب",
+    "review": "مراجعة الحجز",
+    "selectedCar": "السيارة المختارة",
+    "required": "هذا الحقل مطلوب"
+  },
+  "admin": {
+    "title": "لوحة تحكم SGT",
+    "login": "تسجيل الدخول",
+    "password": "كلمة المرور",
+    "dashboard": "لوحة التحكم",
+    "cars": "إدارة السيارات",
+    "bookings": "الحجوزات",
+    "logout": "خروج",
+    "stats": {
+      "totalCars": "إجمالي السيارات",
+      "available": "المتاحة",
+      "bookings": "إجمالي الحجوزات",
+      "pending": "قيد الانتظار"
+    },
+    "addCar": "إضافة سيارة",
+    "editCar": "تعديل سيارة",
+    "deleteCar": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "make": "الشركة",
+    "model": "الموديل",
+    "year": "السنة",
+    "category": "الفئة",
+    "price": "السعر/يوم",
+    "imageUrl": "رابط الصورة",
+    "description": "الوصف",
+    "withDriver": "مع سائق",
+    "isAvailable": "متاحة",
+    "actions": "إجراءات",
+    "noBookings": "لا توجد حجوزات بعد",
+    "loginError": "كلمة مرور غير صحيحة"
+  },
+  "home": {
+    "featured": "مجموعة مميزة",
+    "viewAll": "عرض كل الأسطول"
+  }
+}

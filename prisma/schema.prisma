@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  role         UserRole @default(ADMIN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Car {
+  id           String       @id @default(cuid())
+  make         String
+  model        String
+  year         Int
+  category     CarCategory
+  pricePerDay  Float
+  imageUrl     String
+  withDriver   Boolean      @default(false)
+  isAvailable  Boolean      @default(true)
+  description  String?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  bookings     BookingRequest[]
+}
+
+model BookingRequest {
+  id              String        @id @default(cuid())
+  carId           String
+  car             Car           @relation(fields: [carId], references: [id], onDelete: Cascade)
+  name            String
+  phone           String
+  pickupLocation  String
+  dropoffLocation String
+  date            DateTime
+  time            String?
+  passengers      Int           @default(1)
+  status          BookingStatus @default(PENDING)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
+
+enum UserRole {
+  ADMIN
+}
+
+enum CarCategory {
+  SEDAN
+  SUV
+  SPORTS
+  LUXURY
+  VAN
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
