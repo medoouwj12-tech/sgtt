@@ -41,7 +41,6 @@ export async function getCars(filters?: FleetFilters): Promise<PublicCar[]> {
     try {
       const cars = await prisma.car.findMany({
         where: {
-          id: { in: ACTIVE_FLEET_IDS },
           isAvailable: true,
         },
         orderBy: { pricePerDay: "desc" },
@@ -57,8 +56,6 @@ export async function getCars(filters?: FleetFilters): Promise<PublicCar[]> {
 }
 
 export async function getCarById(id: string): Promise<PublicCar | null> {
-  if (!activeFleetIdSet.has(id)) return null;
-
   const prisma = getPrisma();
   if (prisma) {
     try {
