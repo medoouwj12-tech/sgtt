@@ -24,6 +24,9 @@ export function CarDetailClient({ car }: CarDetailClientProps) {
   const getCarImages = (id: string, mainImg: string) => {
     const isVip = id === "hyundai-h1-vip" || mainImg.includes("h1-white-side");
     const isComfort = id === "hyundai-h1-comfort" || mainImg.includes("h1-white-front-day");
+    const isGlory = id === "dfsk-glory-330" || mainImg.includes("glory-330");
+    const isTiggo = id === "chery-tiggo-8" || mainImg.includes("tiggo-8");
+    const isElantra = id === "hyundai-elantra-cn7" || mainImg.includes("elantra-cn7");
 
     if (isVip) {
       return [
@@ -36,6 +39,30 @@ export function CarDetailClient({ car }: CarDetailClientProps) {
       return [
         { url: "/fleet/h1-white-front-day.jpeg", label: isArabic ? "خارجي" : "Exterior" },
         { url: "/fleet/h1-comfort-interior.jpeg", label: isArabic ? "داخلي" : "Interior" },
+      ];
+    }
+    if (isGlory) {
+      return [
+        { url: "/fleet/glory-330-4.jpg", label: isArabic ? "خارجي (أمامي)" : "Exterior (Front)" },
+        { url: "/fleet/glory-330-5.jpg", label: isArabic ? "خارجي (جانبي)" : "Exterior (Side)" },
+        { url: "/fleet/glory-330-3.jpg", label: isArabic ? "التابلوه" : "Dashboard" },
+        { url: "/fleet/glory-330-1.jpg", label: isArabic ? "الصالون الخلفي" : "Rear Cabin" },
+        { url: "/fleet/glory-330-2.jpg", label: isArabic ? "الصالون الخلفي (2)" : "Rear Cabin (2)" },
+      ];
+    }
+    if (isTiggo) {
+      return [
+        { url: "/fleet/tiggo-8-5.jpg", label: isArabic ? "خارجي (أمامي)" : "Exterior (Front)" },
+        { url: "/fleet/tiggo-8-1.jpg", label: isArabic ? "خارجي (جانبي)" : "Exterior (Side)" },
+        { url: "/fleet/tiggo-8-4.jpg", label: isArabic ? "خارجي (خلفي)" : "Exterior (Rear)" },
+        { url: "/fleet/tiggo-8-3.jpg", label: isArabic ? "التابلوه" : "Dashboard" },
+        { url: "/fleet/tiggo-8-2.jpg", label: isArabic ? "الشنطة" : "Trunk" },
+      ];
+    }
+    if (isElantra) {
+      return [
+        { url: "/fleet/elantra-cn7-2.jpg", label: isArabic ? "خارجي (أمامي)" : "Exterior (Front)" },
+        { url: "/fleet/elantra-cn7-1.jpg", label: isArabic ? "خارجي (خلفي)" : "Exterior (Rear)" },
       ];
     }
     return [
