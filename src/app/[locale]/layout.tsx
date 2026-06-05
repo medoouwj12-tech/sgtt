@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -45,6 +46,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Navbar />
             <main className="flex-1">{children}</main>
+            <FloatingWhatsApp />
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

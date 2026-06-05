@@ -21,6 +21,7 @@ import { buildBookingMessage, getWhatsAppUrl } from "@/lib/whatsapp";
 import type { PublicCar } from "@/types";
 
 const STEPS = [1, 2, 3, 4] as const;
+const TRIP_TYPES = ["city", "airport", "intercity", "fullDay"] as const;
 
 interface BookingWizardProps {
   cars: PublicCar[];
@@ -42,7 +43,9 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     dropoffLocation: preselectedDropoff ?? "",
     date: "",
     time: "",
+    tripType: "",
     passengers: "",
+    notes: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -53,6 +56,9 @@ export function BookingWizard({ cars }: BookingWizardProps) {
 
   const carName = selectedCar
     ? `${selectedCar.make} ${selectedCar.model}`
+    : "";
+  const tripTypeLabel = form.tripType
+    ? t(`tripTypes.${form.tripType}`)
     : "";
 
   const validateStep = (s: number): boolean => {
@@ -86,7 +92,9 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     const message = buildBookingMessage({
       name: form.name,
       carName,
+      tripType: tripTypeLabel,
       passengers: passengerCount,
+      notes: form.notes.trim(),
       pickup: form.pickupLocation,
       dropoff: form.dropoffLocation,
       date: form.date,
@@ -106,7 +114,9 @@ export function BookingWizard({ cars }: BookingWizardProps) {
           dropoffLocation: form.dropoffLocation,
           date: form.date,
           time: form.time,
+          tripType: form.tripType,
           passengers: passengerCount,
+          notes: form.notes.trim(),
         }),
       });
     } catch {
@@ -253,6 +263,22 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                   />
                 </Field>
               </div>
+              <Field label={t("tripType")}>
+                <select
+                  value={form.tripType}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, tripType: e.target.value }))
+                  }
+                  className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground outline-none transition-colors focus-visible:border-gold focus-visible:ring-2 focus-visible:ring-gold/20"
+                >
+                  <option value="">{t("tripTypePlaceholder")}</option>
+                  {TRIP_TYPES.map((tripType) => (
+                    <option key={tripType} value={tripType}>
+                      {t(`tripTypes.${tripType}`)}
+                    </option>
+                  ))}
+                </select>
+              </Field>
               <Field label={t("passengers")}>
                 <Input
                   type="number"
@@ -265,6 +291,17 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                   }))}
                 />
               </Field>
+              <Field label={t("notes")}>
+                <textarea
+                  value={form.notes}
+                  onChange={(e) =>
+                    setForm((f) => ({ ...f, notes: e.target.value }))
+                  }
+                  placeholder={t("notesPlaceholder")}
+                  rows={4}
+                  className="min-h-28 w-full resize-y rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus-visible:border-gold focus-visible:ring-2 focus-visible:ring-gold/20"
+                />
+              </Field>
             </div>
           )}
 
@@ -275,10 +312,12 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                 <Row label={t("selectedCar")} value={carName} />
                 <Row label={t("fullName")} value={form.name} />
                 <Row label={t("phone")} value={form.phone} />
+                <Row label={t("tripType")} value={tripTypeLabel} />
                 <Row label={t("pickup")} value={form.pickupLocation} />
                 <Row label={t("dropoff")} value={form.dropoffLocation} />
                 <Row label={t("date")} value={`${form.date} ${form.time}`} />
                 <Row label={t("passengers")} value={String(form.passengers || "")} />
+                <Row label={t("notes")} value={form.notes} />
               </div>
             </div>
           )}

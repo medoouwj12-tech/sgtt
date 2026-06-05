@@ -30,5 +30,7 @@ export interface BookingFormData {
   dropoffLocation: string;
   date: string;
   time: string;
+  tripType?: string;
   passengers: number | string;
+  notes?: string;
 }
