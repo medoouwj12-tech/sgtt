@@ -42,7 +42,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     dropoffLocation: preselectedDropoff ?? "",
     date: "",
     time: "",
-    passengers: 1,
+    passengers: 0,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
