@@ -43,6 +43,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     date: "",
     time: "",
     passengers: 0,
+
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -83,7 +84,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     const message = buildBookingMessage({
       name: form.name,
       carName,
-      passengers: form.passengers,
+      passengers: Number(form.passengers) || 0,
       pickup: form.pickupLocation,
       dropoff: form.dropoffLocation,
       date: form.date,
@@ -255,13 +256,11 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                   type="number"
                   min={1}
                   max={20}
-                  value={form.passengers}
-                  onChange={(e) =>
-                    setForm((f) => ({
-                      ...f,
-                      passengers: parseInt(e.target.value, 10) || 1,
-                    }))
-                  }
+                  value={form.passengers === 0 ? "" : form.passengers}
+                  onChange={(e) => setForm((f) => ({
+                    ...f,
+                    passengers: e.target.value ? parseInt(e.target.value, 10) : "",
+                  }))}
                 />
               </Field>
             </div>
