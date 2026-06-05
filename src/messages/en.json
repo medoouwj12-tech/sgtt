@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "fleet": "Fleet",
+    "destinations": "Destinations",
     "about": "About",
     "contact": "Contact",
     "bookNow": "Book Now"
@@ -131,5 +132,58 @@
   "home": {
     "featured": "Featured Collection",
     "viewAll": "View All Fleet"
+  },
+  "destinations": {
+    "title": "Egypt's Wonders & Historic Landmarks",
+    "subtitle": "Explore the timeless treasures and breathtaking landscapes of Egypt with SGT's premium transfers and custom private tours.",
+    "bookTrip": "Book a Ride Here",
+    "viewDetails": "View Details",
+    "categories": {
+      "ALL": "All",
+      "HISTORICAL": "Historical",
+      "CULTURAL": "Cultural",
+      "NATURAL": "Natural"
+    },
+    "history": "Historical Summary",
+    "location": "Location",
+    "close": "Close",
+    "items": {
+      "pyramids": {
+        "title": "Giza Pyramids & Sphinx",
+        "location": "Giza, Greater Cairo",
+        "desc": "The sole surviving wonder of the ancient world, representing the pinnacle of Pharaohs' awe-inspiring architecture.",
+        "history": "Constructed around 4,500 years ago during the Fourth Dynasty of the Old Kingdom, the Giza Pyramids served as monumental tombs for Pharaohs Khufu, Khafre, and Menkaure. Guarded by the legendary Sphinx—carved out of a single limestone block—it remains an architectural marvel of human history."
+      },
+      "nile": {
+        "title": "The Nile River Cruise",
+        "location": "Cairo / Luxor / Aswan",
+        "desc": "Experience the lifeline of Egypt with luxury felucca tours, dinner cruises, or scenic sunset sails.",
+        "history": "As the longest river in the world, the Nile has sustained Egyptian civilization since antiquity. From providing fertile land to serving as a vital transport route, it now offers travelers a stunning way to experience Egypt's scenic beauty, either via sunset cruises or luxury cruises between Luxor and Aswan."
+      },
+      "luxor": {
+        "title": "Luxor Temple & Valley of the Kings",
+        "location": "Luxor, Upper Egypt",
+        "desc": "Often called the world's greatest open-air museum, hosting spectacular temples and vibrant royal tombs.",
+        "history": "Ancient Thebes (modern-day Luxor) was the capital of Egypt during the New Kingdom. The East Bank features the massive Luxor and Karnak temples, while the West Bank is home to the Valley of the Kings, where royalty including Tutankhamun and Ramesses II were laid to rest in gorgeously decorated rock-cut tombs."
+      },
+      "museum": {
+        "title": "Grand Egyptian Museum (GEM)",
+        "location": "Giza Plateau",
+        "desc": "The largest archaeological museum in the world dedicated to a single civilization, housing Tutankhamun's full collection.",
+        "history": "Located just steps from the Pyramids, the Grand Egyptian Museum (GEM) is a state-of-the-art cultural landmark. It showcases over 100,000 artifacts across diverse historical eras, including the complete, pristine collection of King Tutankhamun displayed together for the very first time."
+      },
+      "khan": {
+        "title": "Khan El-Khalili Bazaar",
+        "location": "Fatimid Cairo",
+        "desc": "A vibrant, centuries-old historic market filled with traditional crafts, aromatic spices, and heritage cafes.",
+        "history": "Dating back to the 14th century, Khan El-Khalili is one of the oldest and most famous markets in the Middle East. It consists of narrow stone alleys lined with shops selling fine brass work, silver jewelry, perfume oils, and exotic spices. It is also home to historic coffee houses like El Fishawy."
+      },
+      "alexandria": {
+        "title": "Bibliotheca Alexandrina",
+        "location": "Alexandria, Mediterranean Coast",
+        "desc": "A modern architectural marvel commemorating the ancient Great Library of Alexandria.",
+        "history": "Inaugurated in 2002, the Bibliotheca Alexandrina stands near the site of the ancient Library of Alexandria, which was the ancient world's center of learning. The new circular library features a massive reading hall with space for millions of books, multiple museums, art galleries, and a planetarium."
+      }
+    }
   }
 }

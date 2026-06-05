@@ -30,14 +30,16 @@ export function BookingWizard({ cars }: BookingWizardProps) {
   const t = useTranslations("booking");
   const searchParams = useSearchParams();
   const preselectedId = searchParams.get("carId");
+  const preselectedPickup = searchParams.get("pickup");
+  const preselectedDropoff = searchParams.get("dropoff");
 
   const [step, setStep] = useState<1 | 2 | 3 | 4>(preselectedId ? 2 : 1);
   const [form, setForm] = useState({
     carId: preselectedId ?? "",
     name: "",
     phone: "",
-    pickupLocation: "",
-    dropoffLocation: "",
+    pickupLocation: preselectedPickup ?? "",
+    dropoffLocation: preselectedDropoff ?? "",
     date: "",
     time: "",
     passengers: 1,
