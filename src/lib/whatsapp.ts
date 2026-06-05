@@ -3,7 +3,7 @@ export const WHATSAPP_NUMBER = "201005845698";
 export function buildBookingMessage(data: {
   name: string;
   carName: string;
-  passengers: number;
+  passengers?: number;
   pickup: string;
   dropoff: string;
   date: string;
@@ -15,11 +15,14 @@ export function buildBookingMessage(data: {
     `Name: ${data.name}`,
     `Phone: ${data.phone ?? "—"}`,
     `Car: ${data.carName}`,
-    `Passengers: ${data.passengers}`,
     `From: ${data.pickup}`,
     `To: ${data.dropoff}`,
     `Date: ${data.date}`,
   ];
+
+  if (data.passengers) {
+    lines.splice(4, 0, `Passengers: ${data.passengers}`);
+  }
 
   if (data.time) {
     lines.push(`Time: ${data.time}`);

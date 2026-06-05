@@ -42,8 +42,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
     dropoffLocation: preselectedDropoff ?? "",
     date: "",
     time: "",
-    passengers: 0,
-
+    passengers: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -81,10 +80,13 @@ export function BookingWizard({ cars }: BookingWizardProps) {
   const submitWhatsApp = async () => {
     if (!validateStep(3) || !selectedCar) return;
 
+    const passengerCount =
+      form.passengers === "" ? undefined : Number(form.passengers);
+
     const message = buildBookingMessage({
       name: form.name,
       carName,
-      passengers: Number(form.passengers) || 0,
+      passengers: passengerCount,
       pickup: form.pickupLocation,
       dropoff: form.dropoffLocation,
       date: form.date,
@@ -104,7 +106,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
           dropoffLocation: form.dropoffLocation,
           date: form.date,
           time: form.time,
-          passengers: form.passengers,
+          passengers: passengerCount,
         }),
       });
     } catch {
@@ -256,10 +258,10 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                   type="number"
                   min={1}
                   max={20}
-                  value={form.passengers === 0 ? "" : form.passengers}
+                  value={form.passengers}
                   onChange={(e) => setForm((f) => ({
                     ...f,
-                    passengers: e.target.value ? parseInt(e.target.value, 10) : "",
+                    passengers: e.target.value,
                   }))}
                 />
               </Field>
@@ -276,7 +278,7 @@ export function BookingWizard({ cars }: BookingWizardProps) {
                 <Row label={t("pickup")} value={form.pickupLocation} />
                 <Row label={t("dropoff")} value={form.dropoffLocation} />
                 <Row label={t("date")} value={`${form.date} ${form.time}`} />
-                <Row label={t("passengers")} value={String(form.passengers)} />
+                <Row label={t("passengers")} value={String(form.passengers || "")} />
               </div>
             </div>
           )}

@@ -19,6 +19,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    const passengerCount = Number(passengers);
+
     const prisma = getPrisma();
     if (!prisma) {
       return NextResponse.json({ success: true, mock: true });
@@ -33,7 +35,8 @@ export async function POST(request: Request) {
         dropoffLocation,
         date: new Date(date),
         time: time || null,
-        passengers: passengers ?? 1,
+        passengers:
+          Number.isFinite(passengerCount) && passengerCount > 0 ? passengerCount : 1,
       },
     });
 
